@@ -1,0 +1,64 @@
+//GET API 1 
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+//GET all high api2
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+GET http://localhost:3000/todos/?search_q=Play
+
+
+
+###
+//API about getting todo from todoId
+GET http://localhost:3000/todos/3/
+
+
+###
+//inserting todo using the  request
+POST http://localhost:3000/todos/
+content-type:application/json
+
+{
+    "id":8,
+    "todo": "Watch the movie",
+    "priority": "LOW",
+    "status": "TO DO"
+}
+
+###
+//updating the values using request for api 4
+PUT http://localhost:3000/todos/1/
+content-type:application/json 
+
+{
+    "status":"DONE"
+}
+
+###
+//updating the priority in scenerio api4 
+PUT http://localhost:3000/todos/3/
+content-type:application/json
+
+{
+    "priority":"HIGH"
+}
+
+
+###
+//updating the  todo in scernerio api4 
+PUT http://localhost:3000/todos/4/
+content-type:application/json 
+
+{
+    "todo":"Do the Assignment"
+}
+
+
+###
+//deleting  the query api5 
+DELETE http://localhost:3000/todos/2/
